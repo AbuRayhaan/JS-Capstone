@@ -1,0 +1,55 @@
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  /* background-image: url(../images/movie1.jpg); */
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(95, 91, 91);
+  height: 50px;
+}
+
+.header-title {
+  margin-left: 20px;
+}
+
+.header-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+.header-item {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+main {
+  margin-top: 120px;
+}
+
+.movie-image {
+  background-position: center;
+  height: 550px;
+  background-repeat: no-repeat;
+}
+
+.fa-solid {
+  color: red;
+}
