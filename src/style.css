@@ -44,12 +44,45 @@ main {
   margin-top: 120px;
 }
 
+.movie-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-catalog {
+  display: flex;
+  flex-direction: column;
+  gap : 0;
+}
+
 .movie-image {
   background-position: center;
-  height: 550px;
+  height: 450px;
   background-repeat: no-repeat;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.movie-name {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .fa-solid {
   color: red;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 60px;
+  }
+  
 }

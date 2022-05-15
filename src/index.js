@@ -59,9 +59,6 @@ const collection = [
 
 const catalog = document.querySelector('.movie-container');
 
-// const body = document.querySelector('body');
-// body.append(myMovie1);
-
 for (let i = 0; i < collection.length; i += 1) {
   catalog.innerHTML += `<div class="movie-catalog">
   <div class="movie-image">
@@ -72,5 +69,5 @@ for (let i = 0; i < collection.length; i += 1) {
       <p class="movie-name">${collection[i].movie}</p>
       <i class="fa-solid fa-heart"></i>
   </div>
-</div>`;
+  </div>`;
 }
