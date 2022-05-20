@@ -56,13 +56,18 @@ main {
   gap : 0;
 }
 
-.movie-image {
-  background-position: center;
+.movie-image img{
   height: 450px;
-  background-repeat: no-repeat;
 }
 
 .movie-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.movie-like {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -76,6 +81,14 @@ main {
 .fa-solid {
   color: red;
   cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.hide1 {
+  display: flex;
 }
 
 @media screen and (min-width: 768px) {
