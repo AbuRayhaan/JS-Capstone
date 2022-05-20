@@ -1,73 +1,40 @@
 import './style.css';
-import movie1 from '../images/movie1.jpg';
-import movie2 from '../images/movie2.jpg';
-import movie3 from '../images/movie3.jpg';
-import movie4 from '../images/movie4.jpg';
-import movie5 from '../images/movie5.jpg';
-import movie6 from '../images/movie6.jpg';
-import movie7 from '../images/movie7.jpg';
-import movie8 from '../images/movie8.jpg';
-import movie9 from '../images/movie9.jpg';
 
-const collection = [
-  {
-    id: 1,
-    design: movie1,
-    movie: 'VICE',
-  },
-  {
-    id: 2,
-    design: movie2,
-    movie: 'CRAZY',
-  },
-  {
-    id: 3,
-    design: movie3,
-    movie: 'INFILTRATE HATE',
-  },
-  {
-    id: 4,
-    design: movie4,
-    movie: 'GREEN BOOK',
-  },
-  {
-    id: 5,
-    design: movie5,
-    movie: 'BLACK PANTHER',
-  },
-  {
-    id: 6,
-    design: movie6,
-    movie: 'ROMA',
-  },
-  {
-    id: 7,
-    design: movie7,
-    movie: 'FEARLESS',
-  },
-  {
-    id: 8,
-    design: movie8,
-    movie: 'FAVOURITE',
-  },
-  {
-    id: 9,
-    design: movie9,
-    movie: 'A STAR IS BORN',
-  },
-];
+const baseURL ='https://api.tvmaze.com/shows';
 
-const catalog = document.querySelector('.movie-container');
-
-for (let i = 0; i < collection.length; i += 1) {
-  catalog.innerHTML += `<div class="movie-catalog">
-  <div class="movie-image">
-  <img src = "${collection[i].design}" alt = "${collection[i].movie}">
-  </div>
-
-  <div class="movie-info">
-      <p class="movie-name">${collection[i].movie}</p>
-      <i class="fa-solid fa-heart"></i>
-  </div>
-  </div>`;
+const getShow = async () => {
+  const url = `${baseURL}`;
+  const response = await fetch(url)
+  const showData = await response.json();
+  return showData
 }
+
+const loadShow = async () => {
+  const showList = await getShow();
+  const catalog = document.querySelector('.movie-container');
+
+  for (let i = 0; showList.length = 15; i += 1) {
+    const movie = document.createElement('div');
+    movie.classList.add('movie-catalog');
+    movie.innerHTML =
+     `<div class="movie-image">
+      <img class="" src = "${showList[i].image.original}" alt = "${showList[i].name}">
+      </div>
+
+      <div class="movie-info">
+  
+          <div class="movie-like" id="like-container">
+            <p class="movie-name">${showList[i].name}</p>
+            <i class="fa-solid fa-heart">Likes</i>
+          </div>
+  
+          <div class="movie-comment" id="comment-container">
+              <button class="comment-link" type="button">Comment</button>
+              <button class="reserve-link" type="button">Reservations</button>
+          </div>
+    `;
+    catalog.appendChild(movie);
+  }
+}
+
+loadShow();
