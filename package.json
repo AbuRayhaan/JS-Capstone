@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/AbuRayhaan/JS-Capstone#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
