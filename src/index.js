@@ -32,14 +32,19 @@ const loadShow = async () => {
             <i class="fa-solid fa-heart"></i>
           </div>
   
-          <div class="movie-comment" id="comment-container">
-              <button class="comment-link" type="button" id=>Comment</button>
-              <button class="reserve-link" type="button">Reservations</button>
+          <div class="d-flex m-comment" id="comment-container">
+              <button class="commentBtn" type="button">Comment</button>
+              <button class="reserveBtn" type="button">Reservations</button>
           </div>
       </div>
     `;
     catalog.appendChild(movie);
   }
+
+  const commentBtn = document.querySelectorAll('.commentBtn');
+  const body = document.querySelector('body');
+
+  
 }
 
 loadShow();
