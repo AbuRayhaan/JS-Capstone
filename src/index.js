@@ -17,7 +17,11 @@ const loadShow = async () => {
     const movie = document.createElement('div');
     movie.classList.add('movie-catalog');
     movie.innerHTML =
-     `<div class="movie-image">
+     `<div class="movie-image hide1">
+      <img class="" src = "${showList[i].image.original}" alt = "${showList[i].name}">
+      </div>
+
+      <div class="movie-image hide">
       <img class="" src = "${showList[i].image.original}" alt = "${showList[i].name}">
       </div>
 
@@ -29,9 +33,10 @@ const loadShow = async () => {
           </div>
   
           <div class="movie-comment" id="comment-container">
-              <button class="comment-link" type="button">Comment</button>
+              <button class="comment-link" type="button" id=>Comment</button>
               <button class="reserve-link" type="button">Reservations</button>
           </div>
+      </div>
     `;
     catalog.appendChild(movie);
   }
