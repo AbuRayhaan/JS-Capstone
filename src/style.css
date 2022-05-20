@@ -11,6 +11,10 @@ body {
   /* background-image: url(../images/movie1.jpg); */
 }
 
+.d-flex {
+  display: flex;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -53,7 +57,7 @@ main {
 .movie-catalog {
   display: flex;
   flex-direction: column;
-  gap : 0;
+  align-items: center;
 }
 
 .movie-image img{
@@ -64,7 +68,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
 }
 
 .movie-like {
@@ -74,8 +78,9 @@ main {
 }
 
 .movie-name {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
+  color: blueviolet;
 }
 
 .fa-solid {
@@ -86,7 +91,7 @@ main {
 }
 
 .fa-solid:hover {
-  transform: scale(1.7);
+  transform: scale(1.5);
 }
 
 .hide {
@@ -97,11 +102,64 @@ main {
   display: flex;
 }
 
+button {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  border-color: blueviolet;
+}
+
+.m-comment{
+  gap: 20px;
+}
+
+.commentBtn {
+  background-color: green;
+  font-size: 18px;
+  color: white;
+  border-color: yellow;
+}
+
+.commentBtn:hover {
+  background-color: white;
+  border-color: #ec5242;
+  color: black;
+}
+
+.reserveBtn {
+  background-color: yellow;
+  font-size: 18px;
+  color: black;
+  border-color: green;
+}
+
+.reserveBtn:hover {
+  background-color: white;
+  border-color: #ec5242;
+  color: black;
+}
+
+.catalog-popUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputComment {
+  flex-direction: column;
+  gap: 10px;
+}
+
 @media screen and (min-width: 768px) {
   .movie-container {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 60px;
   }
-  
+
+  .catalog-popUp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
