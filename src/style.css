@@ -24,8 +24,9 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgb(95, 91, 91);
+  background-color: rgb(236, 204, 89);
   height: 50px;
+  z-index: 1;
 }
 
 .header-title {
@@ -139,15 +140,73 @@ button {
   color: black;
 }
 
-.catalog-popUp {
+/* .catalog-popUp {
+  display: none;
+} */
+
+.popUpComment.active {
   display: flex;
+}
+
+.catalog-popUp {
   flex-direction: column;
   align-items: center;
+  border: 2px solid pink;
+  border-radius: 5px;
+  padding: 25px;
+  gap: 20px;
+  background-color: salmon;
+  margin-bottom: 80px;
+}
+
+.fa-xmark {
+  position: absolute;
+  top: 130px;
+  right: 30px;
+}
+
+.img-pop {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px red;
+}
+
+.movie-info-pop {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.commentCount {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.commentList {
+  padding-left: 0;
 }
 
 .inputComment {
   flex-direction: column;
   gap: 10px;
+  width: 100%;
+}
+
+form input {
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 20px;
+  padding: 5px;
+}
+
+form input::placeholder {
+  color: white;
+  font-size: 16px;
+}
+
+.submitBtn {
+  background-color: red;
+  border: 1px solid white;
 }
 
 @media screen and (min-width: 768px) {
@@ -158,8 +217,14 @@ button {
   }
 
   .catalog-popUp {
-    display: flex;
     flex-direction: row;
-    align-items: center;
+    width: 60%;
+    margin-left: 250px;
+  }
+
+  .fa-xmark {
+    position: absolute;
+    top: 130px;
+    right: 260px;
   }
 }
