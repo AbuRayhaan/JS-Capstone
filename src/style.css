@@ -55,6 +55,10 @@ main {
   justify-content: center;
 }
 
+.movie-container.active {
+  filter: blur(8px);
+}
+
 .movie-catalog {
   display: flex;
   flex-direction: column;
@@ -144,8 +148,13 @@ button {
   display: none;
 } */
 
-.popUpComment.active {
+/* .popUpComment.active {
   display: flex;
+} */
+
+.commentPopup {
+  position: fixed;
+  top: 5%;
 }
 
 .catalog-popUp {
@@ -161,7 +170,7 @@ button {
 
 .fa-xmark {
   position: absolute;
-  top: 130px;
+  top: 20px;
   right: 30px;
 }
 
@@ -224,7 +233,6 @@ form input::placeholder {
 
   .fa-xmark {
     position: absolute;
-    top: 130px;
     right: 260px;
   }
 }
