@@ -1,13 +1,13 @@
 import './style.css';
 
-const baseURL ='https://api.tvmaze.com/shows';
+const baseURL = 'https://api.tvmaze.com/shows';
 
 const getShow = async () => {
   const url = `${baseURL}`;
-  const response = await fetch(url)
+  const response = await fetch(url);
   const showData = await response.json();
-  return showData
-}
+  return showData;
+};
 
 const loadShow = async () => {
   const showList = await getShow();
@@ -16,8 +16,7 @@ const loadShow = async () => {
   for (let i = 0; showList.length = 15; i += 1) {
     const movie = document.createElement('div');
     movie.classList.add('movie-catalog');
-    movie.innerHTML =
-     `<div class="movie-image hide1">
+    movie.innerHTML = `<div class="movie-image hide1">
       <img class="" src = "${showList[i].image.original}" alt = "${showList[i].name}">
       </div>
 
@@ -73,19 +72,18 @@ const loadShow = async () => {
                   <button class="submitBtn">submit</button>
               </form>
           </div>
-        </div>`
+        </div>`;
         commentPopup.appendChild(popUp);
 
         const closePopup = document.querySelector('.fa-xmark');
-  
+
         closePopup.addEventListener('click', () => {
-          console.log('click works');
           commentPopup.innerHTML = '';
           catalog.classList.remove('active');
         });
       });
     });
   }
-}
+};
 
 loadShow();
