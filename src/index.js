@@ -28,7 +28,7 @@ const loadShow = async () => {
   
           <div class="movie-like" id="like-container">
             <p class="movie-name">${showList[i].name}</p>
-            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-heart"><span class="count"> 2M <span></i>
           </div>
   
           <div class="d-flex m-comment" id="comment-container">
